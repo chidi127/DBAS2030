@@ -105,12 +105,17 @@ str(num_data_dec)
 
 int_nums = as.integer(num_data_dec)# convert data types
 
+num_data = as.double(c(3,7,2))
+typeof(num_data)
+
+
 ###################################
 # Chars
 #################################
 char <- "some text" # strings
 char
 class(char)
+typeof(char)
 
 numAsChar= as.character(int_nums)
 

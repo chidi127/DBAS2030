@@ -116,8 +116,9 @@ char <- "some text" # strings
 char
 class(char)
 typeof(char)
-
 numAsChar= as.character(int_nums)
+
+
 
 # case and space sensitivity 
 char_space <- "text "
@@ -151,6 +152,7 @@ class(text) # to know the class
 
 text_factor <- as.factor(text) # transform to factor
 class(text_factor) # recheck the class
+levels(text_factor)
 
 ##############################################
 # Logical
@@ -195,7 +197,7 @@ m1 <- matrix(C<-(1:10),nrow=5, ncol=6)
 m1
 a_m1 <- apply(m1, 2, sum)
 a_m1
-
+typeof(a_m1)
 ######################################
 # List Apply
 #####################################
@@ -219,6 +221,7 @@ str(movies_lower)
 
 # We can measure the minimum speed and stopping distances of cars from the cars dataset.
 dt <- cars
+view(cars)
 lmn_cars <- lapply(dt, min)
 smn_cars <- sapply(dt, min)
 lmn_cars
@@ -247,6 +250,7 @@ dat <- iris # load the iris dataset and renamed it dat
 
 View(iris)
 
+head(dat)
 head(dat,25) # first 6 observations
 str(dat) # structure of dataset
 
@@ -256,7 +260,7 @@ levels(iris$Species) # note $ refers to col
 #############
 # min, max
 #############
-min(dat$Sepal.Length)
+min(dat$Petal.Length)
 max(dat$Sepal.Length)
 
 #================================= START HERE!!!!!
